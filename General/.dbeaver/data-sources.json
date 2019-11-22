@@ -1,0 +1,31 @@
+{
+	"folders": {},
+	"connections": {
+		"dbeaver-sample-database-sqlite-1": {
+			"provider": "generic",
+			"driver": "sqlite_jdbc",
+			"name": "DBeaver Sample Database (SQLite)",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\reyckmans\\AppData\\Roaming\\DBeaverData\\workspace6\\.metadata\\sample-database-sqlite-1\\Chinook.db",
+				"url": "jdbc:sqlite:C:\\Users\\reyckmans\\AppData\\Roaming\\DBeaverData\\workspace6\\.metadata\\sample-database-sqlite-1\\Chinook.db",
+				"type": "dev"
+			}
+		},
+		"sqlite_jdbc-16e6f29eb0d-61784aff93eaf718": {
+			"provider": "generic",
+			"driver": "sqlite_jdbc",
+			"name": "SQLite - navigationsystems.db",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "U:\\School 2019-2020\\SQL\\sqlite-tools-win32-x86-3300100\\navigationsystems.db",
+				"url": "jdbc:sqlite:U:\\School 2019-2020\\SQL\\sqlite-tools-win32-x86-3300100\\navigationsystems.db",
+				"type": "dev",
+				"handlers": {}
+			}
+		}
+	}
+}
