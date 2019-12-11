@@ -17,12 +17,21 @@ SELECT * FROM Album JOIN Attist ON Album.ArtistId = Artist.ArtistId WHERE Artist
 SELECT Album.AlbumId, Album.Title, Album.Name FROM Album JOIN Artist ON Album.ArtistId = Artist.ArtistId WHERE ArtistId = 8;
 
 
-SELECT * 
-	FROM Customer 
-	WHERE Country = 'USA' 
+SELECT * /*selecteer alle gegevens*/
+	FROM Customer /*van de tabel Customer*/
+	WHERE Country = 'USA' /*waar country gelijk is aan USA*/
+	OR country = 'Belgium'
 		AND LastName LIKE 'G%' 
 		AND FirstName LIKE '%n';
 	
+SELECT * /*selecteer alle gegevens*/
+	FROM Customer /*van de tabel Customer*/
+		WHERE Country = 'USA' /*waar country gelijk is aan USA*/
+		OR Country = 'BELGIUM' /*of waar country gelijk is aan BELGIUM*/
+		AND NOT City = 'New York' /*en de City niet gelijk is aan New York*/
+			AND LastName LIKE 'G%' /*en waar de achternaam begint met een G*/
+			AND FirstName LIKE '%n'; /*en de voornaam eindigt op een N*/
+		
 SELECT * 
 	FROM Customer 
 	WHERE State = 'ON' 
@@ -118,13 +127,43 @@ SELECT *
 
 
 
+SELECT * /*selecteer alle gegevens*/
+	FROM Customer /*van de tabel Customer*/
+		WHERE Country = 'USA' /*waar country gelijk is aan USA*/
+		OR Country = 'BELGIUM' /*of waar country gelijk is aan BELGIUM*/
+		AND NOT City = 'New York' /*en de City niet gelijk is aan New York*/
+			AND LastName LIKE 'G%' /*en waar de achternaam begint met een G*/
+			AND FirstName LIKE '%n'; /*en de voornaam eindigt op een N*/
 
 
+ 
 
 
+			
+SELECT * FROM Album;			
 
+SELECT * 
+	FROM Album
+	WHERE ArtistId = '8';
 
+SELECT AlbumId , Title
+	FROM Album;
 
+SELECT AlbumId as 'album ID' , Title as 'titeL jaaaa'
+	FROM Album;
+
+SELECT MAX(Milliseconds)FROM Track;
+
+SELECT COUNT(City) 
+	FROM Customer
+	WHERE City = 'London';
+
+SELECT AVG(Milliseconds) from Track;
+
+SELECT Track.name, Genre.Name as 'genre'
+	FROM Track
+	JOIN Genre on Track.GenreId = genre.GenreId
+	ORDER by genre.Name, track.Name DESC;
 
 
 
